@@ -1,4 +1,4 @@
-<!-- https://pages.github.com/ -->
+<!-- https://general-mp.github.io/unilang/index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -47,11 +47,19 @@
         }
         @font-face {
             font-family: "Consolas";
-            src: url("webfont/Consolas-Font/CONSOLA.TTF") format("truetype");
+            src: url("webfont/CONSOLA.TTF") format("truetype");
         }
         @font-face {
             font-family: "Consolas-Bold";
-            src: url("webfont/Consolas-Font/CONSOLAB.TTF") format("truetype");
+            src: url("webfont/CONSOLAB.TTF") format("truetype");
+        }
+        @font-face {
+            font-family: "Muli-Bold";
+            src: url("webfont/Muli-Bold.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: "Muli-Black";
+            src: url("webfont/Muli-Black.ttf") format("truetype");
         }
         mark.orange {
             color:#ff931d;
@@ -82,7 +90,7 @@
             text-align: center;
             padding: 17px 60px;
             text-decoration: none;
-            font-family: "OpenSans-Medium";
+            font-family: "Muli-Bold";
             font-size: 17px;
         }
 
@@ -116,7 +124,7 @@
         }
         h1.front-page {
             font-size: 30px;
-            font-family: "OpenSans-Bold";
+            font-family: "Muli-Black";
         }
         .text-container {
             position: relative;
@@ -139,7 +147,7 @@
             display: flex;
             align-items: center;
             color: #fff;
-            font-family: "OpenSans-Bold";
+            font-family: "Muli-Black";
             justify-content: center;
             z-index: 6;
         }
@@ -151,20 +159,18 @@
             display: flex;
             align-items: right;
             color: #ff931d;
-            font-family: "OpenSans-Bold";
+            font-family: "Muli-Black";
             justify-content: center;
             z-index: 6;
         }
         strong.young {
             font-size: 90px;
             position: relative;
-            font-family: "OpenSans-Bold";
             color: white;
         }
         strong.start {
             font-size: 90px;
             position: relative;
-            font-family: "OpenSans-Bold";
             color: #ff931d;
         }
         div.invite {
@@ -173,7 +179,7 @@
         }
         #blob {
             background-color: white;
-            height: 450px;
+            height: 420px;
             aspect-ratio: 1;
             position: absolute;
             left: 50%;
@@ -182,8 +188,8 @@
             border-radius: 50%;
             background: linear-gradient(
                 to right,
-                #ff931d,
-                black
+                black,
+                #ff931d
             );
             animation: rotate 20s infinite;
             z-index: -1;
