@@ -75,7 +75,7 @@
         .topnav {
             overflow: hidden;
             background-color: #00000000;
-            z-index: 2;
+            z-index: 100;
         }
 
         .logo-container {
@@ -86,6 +86,7 @@
 
         .topnav a {
             float: right;
+            display: block;
             color: #f2f2f2;
             text-align: center;
             padding: 17px 60px;
@@ -167,11 +168,23 @@
             font-size: 90px;
             position: relative;
             color: white;
+
+            transition-property: scale;
+            transition-timing-function: ease-in-out;
+        }
+        strong.young:hover {
+            transform: scale(1.05);
         }
         strong.start {
             font-size: 90px;
             position: relative;
             color: #ff931d;
+
+            transition-property: scale;
+            transition-timing-function: ease-in-out;
+        }
+        strong.start:hover {
+            transform: scale(1.05);
         }
         div.invite {
             position: relative;
