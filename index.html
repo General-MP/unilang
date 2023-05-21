@@ -241,7 +241,7 @@
             </div>
             <div class="invite">
                 <div class="text-container3">
-                    <strong class="start">Start</strong>
+                    <strong class="start" data-value="Start">Start</strong>
                 </div>
                 <div class="text-container2">
                     <strong class="young">Young</strong>
@@ -271,5 +271,26 @@
             backSpeed: 150,
             loop: true
         })
+
+        const letters = "abcdefghijklmnopqrStuvwxYz"
+        document.querySelector("strong.start").onmouseover = event => {
+            let iteration = 0;
+
+            const interval = setInterval(() => {
+                event.target.innerText = event.target.innerText.split("")
+                .map((letter, index) => {
+                    if(index < iteration){
+                        return event.target.dataset.value[index];
+                    }
+
+                    return letters[Math.floor(Math.random() * 26)]
+                })
+                .join("");
+
+            if(iteration >= event.target.dataset.value.length) clearInterval(interval);
+
+            iteration += 1 / 3;
+            }, 30);
+        }
     </script>
 </html>
