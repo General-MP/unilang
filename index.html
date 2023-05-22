@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UNILANG</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="image/UNILANG logo.png">
   </head>
     <style>
         * {
@@ -192,7 +193,7 @@
         }
         #blob {
             background-color: white;
-            height: 420px;
+            height: 300px;
             aspect-ratio: 1;
             position: absolute;
             left: 50%;
@@ -201,8 +202,8 @@
             border-radius: 50%;
             background: linear-gradient(
                 to right,
-                black,
-                #ff931d
+                #fc5b00,
+                #f09400
             );
             animation: rotate 20s infinite;
             z-index: -1;
@@ -219,7 +220,52 @@
                 rotate: 360deg;
             }
         }
+        .side {
+            height: 100vh;
+            width: 100%;
+            top: 710px;
 
+            display: grid;
+            place-items: center;
+
+            overflow: hidden;
+            position: absolute;
+        }
+        .side .title {
+            font-family: "Muli-Black";
+            font-size: 8vw;
+            margin: 0px 15vw;
+            width: 70vw;
+            font-size: 100px;
+        }
+        #left-side {
+            color: black;
+            background-color: #ff931d;
+            z-index: 10;
+        }
+        #right-side {
+            color: #ff931d;
+            background-color: black;
+            z-index: 9;
+        }
+        #Big-text-orange {
+            font-size: 200px;
+            color: #ef7c00;
+        }
+        #Big-text-grey {
+            font-size: 200px;
+            color: #1e1d1b;
+        }
+        #number-black {
+            color: black;
+            font-size: 30px;
+            font-family: "Muli-Bold";
+        }
+        #number-white {
+            color: white;
+            font-size: 30px;
+            font-family: "Muli-Bold";
+        }
     </style>
     <body>
         <div id="blob"></div>
@@ -250,6 +296,18 @@
                     <h1>let <mark class="orange">possible</mark> = <span class="auto-type"></span>;</h1>
                 </div>
             </div>
+        <div id="left-side" class="side">
+            <h2 class="title">
+                <div id="Big-text-orange">Taught</div> 
+                <div id="number-black">x,xxx students</div>
+            </h2>
+        </div>
+        <div id="right-side" class="side">
+            <h2 class="title">
+                <div id="Big-text-grey">Raised</div> 
+                <div id="number-white">x,xxxx Baht</div>
+            </h2>
+        </div>
     </body>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js">  
     </script>
@@ -312,5 +370,17 @@
             iteration += 1 / 3;
             }, 30);
         }
+
+        const left = document.getElementById("left-side")
+
+        const handleOnMove = e => {
+            const p = e.clientX / window.innerWidth * 100;
+
+            left.style.width = `${p}%`
+        }
+
+        document.onmousemove = e => handleOnMove(e);
+    
+        document.ontouchmove = e => handleOnMove(e.touches[0]);
     </script>
 </html>
