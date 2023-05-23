@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UNILANG</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="image/UNILANG logo.png">
+    <link rel="icon" type="image/x-icon" href="image/Circle-logo.png">
   </head>
     <style>
         * {
@@ -65,10 +65,12 @@
         mark.orange {
             color:#ff931d;
             background: none;
+            border: none;
         }
         mark.green {
             color:#04f7b3;
             background: none;
+            border: none;
         }
         span {
             color:#04f7b3;
@@ -266,6 +268,22 @@
             font-size: 30px;
             font-family: "Muli-Bold";
         }
+        #boldblack { 
+            background-color: black;
+            border: none;
+            padding: 5px;
+            border: 2px solid;
+        }
+        #boldorange { 
+            background-color: #ff931d;
+            border: none;
+            position: absolute;
+            top: 380px;
+            left: 500px;
+            font-size: 35px;
+            padding: 5px;
+            border: 2px solid;
+        }
     </style>
     <body>
         <div id="blob"></div>
@@ -281,7 +299,7 @@
             </a></li>
         </div>
             <img class="logo-bg" src="image/UNILANG logo.png" width=auto height=auto></img>
-            <img class="avatar" src="image/foreground1.png" width=auto height=auto></img>
+            <img class="avatar" src="image/foreground1-edgeblur.png" width=auto height=auto></img>
             <div class="drone-container">
                 <img class="drone" src="image/drone.png" width=auto height=auto></img>
             </div>
@@ -298,14 +316,14 @@
             </div>
         <div id="left-side" class="side">
             <h2 class="title">
-                <div id="Big-text-orange">Taught</div> 
-                <div id="number-black">x,xxx students</div>
+                <div id="Big-text-orange">170</div> 
+                <mark id="boldblack">Taught</mark>
             </h2>
         </div>
         <div id="right-side" class="side">
             <h2 class="title">
-                <div id="Big-text-grey">Raised</div> 
-                <div id="number-white">x,xxxx Baht</div>
+                <div id="Big-text-grey">14,118</div> 
+                <mark id="boldorange">Raised</mark>
             </h2>
         </div>
     </body>
