@@ -251,12 +251,20 @@
             z-index: 9;
         }
         #Big-text-orange {
-            font-size: 200px;
+            font-size: 400px;
             color: #ef7c00;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
         #Big-text-grey {
             font-size: 200px;
             color: #1e1d1b;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            display: flex;
         }
         #number-black {
             color: black;
@@ -267,22 +275,6 @@
             color: white;
             font-size: 30px;
             font-family: "Muli-Bold";
-        }
-        #boldblack { 
-            background-color: black;
-            border: none;
-            padding: 5px;
-            border: 2px solid;
-        }
-        #boldorange { 
-            background-color: #ff931d;
-            border: none;
-            position: absolute;
-            top: 380px;
-            left: 500px;
-            font-size: 35px;
-            padding: 5px;
-            border: 2px solid;
         }
     </style>
     <body>
@@ -317,13 +309,11 @@
         <div id="left-side" class="side">
             <h2 class="title">
                 <div id="Big-text-orange">170</div> 
-                <mark id="boldblack">Taught</mark>
             </h2>
         </div>
         <div id="right-side" class="side">
             <h2 class="title">
                 <div id="Big-text-grey">14,118</div> 
-                <mark id="boldorange">Raised</mark>
             </h2>
         </div>
     </body>
