@@ -9,281 +9,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="image/Circle-logo.png">
   </head>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: #000000;
-            z-index: 0;
-        }
-        img.drone {
-            position: relative;
-            left:900px;
-            width: 100%;
-            animation-name: fly;
-            animation-duration: 2.5s;
-            animation-delay: 0s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            animation-direction: alternate;
-            z-index: 4;
-        }
-        .drone-container {
-            width: 15%;
-        }
-        @keyframes fly {
-            0%   {left:900px; top:0px;}
-            50%  {left:903px; top:40px;}
-            100% {left:900px; top:70px;}
-        }
-        @font-face {
-            font-family: "OpenSans-Bold";
-            src: url("webfont/OpenSans-Bold.ttf") format("truetype");
-        }
-        @font-face {
-            font-family: "OpenSans-Medium";
-            src: url("webfont/OpenSans-Medium.ttf") format("truetype");
-        }
-        @font-face {
-            font-family: "Consolas";
-            src: url("webfont/CONSOLA.TTF") format("truetype");
-        }
-        @font-face {
-            font-family: "Consolas-Bold";
-            src: url("webfont/CONSOLAB.TTF") format("truetype");
-        }
-        @font-face {
-            font-family: "Muli-Bold";
-            src: url("webfont/Muli-Bold.ttf") format("truetype");
-        }
-        @font-face {
-            font-family: "Muli-Black";
-            src: url("webfont/Muli-Black.ttf") format("truetype");
-        }
-        mark.orange {
-            color:#ff931d;
-            background: none;
-            border: none;
-        }
-        mark.green {
-            color:#04f7b3;
-            background: none;
-            border: none;
-        }
-        span {
-            color:#04f7b3;
-        }        
-        .topnav {
-            overflow: hidden;
-            background-color: #00000000;
-            z-index: 100;
-        }
-
-        .logo-container {
-            position: absolute;
-            padding-right: 50px;
-            width: 5%;
-        }
-
-        .topnav a {
-            float: right;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 17px 60px;
-            text-decoration: none;
-            font-family: "Muli-Bold";
-            font-size: 17px;
-        }
-
-        .topnav a:hover {
-            background-color: #ff931d;
-            color: black;
-        }
-
-        .topnav a.home:hover {
-            background-color: rgba(0, 0, 0, 0);
-            color: rgba(0, 0, 0, 0);
-        }
-        
-        img.logo {
-            position: relative;
-            width: 100%;
-        }
-        .logo-bg {
-            position: absolute;
-            top: 85px;
-            left: 670px;
-            width: 40%;
-            z-index: 3;
-        }
-        .avatar {
-            position: absolute;
-            top: 20px;
-            left: 570px;
-            width: 55%;
-            z-index: 4;
-        }
-        h1.front-page {
-            font-size: 30px;
-            font-family: "Muli-Black";
-        }
-        .text-container {
-            position: relative;
-            bottom: 30px;
-            width: 60%;
-            margin-top:5px;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            font-family: "Consolas";
-            font-size: 10px;
-            justify-content: center;
-            z-index: 6;
-        }
-        .text-container2 {
-            position: relative;
-            bottom: 30px;
-            width: 60%;
-            margin-bottom: -5px;
-            display: flex;
-            align-items: center;
-            color: #fff;
-            font-family: "Muli-Black";
-            justify-content: center;
-            z-index: 6;
-        }
-        .text-container3 {
-            position: relative;
-            bottom: 30px;
-            width: 60%;
-            margin-bottom: -42px;
-            display: flex;
-            align-items: right;
-            color: #ff931d;
-            font-family: "Muli-Black";
-            justify-content: center;
-            z-index: 6;
-        }
-        strong.young {
-            font-size: 90px;
-            position: relative;
-            color: white;
-
-            transition-property: scale;
-            transition-timing-function: ease-in-out;
-        }
-        strong.young:hover {
-            transform: scale(1.03);
-        }
-        strong.start {
-            font-size: 90px;
-            position: relative;
-            color: #ff931d;
-
-            transition-property: scale;
-            transition-timing-function: ease-in-out;
-        }
-        strong.start:hover {
-            transform: scale(1.03);
-        }
-        div.invite {
-            position: relative;
-            bottom: 60px;
-        }
-        #blob {
-            background-color: white;
-            height: 300px;
-            aspect-ratio: 1;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            translate: -50% -50%;
-            border-radius: 50%;
-            background: linear-gradient(
-                to right,
-                #fc5b00,
-                #f09400
-            );
-            animation: rotate 20s infinite;
-            z-index: -1;
-            filter: blur(200px);
-        }
-        @keyframes rotate {
-            from {
-                rotate: 0deg;
-            }
-            50% {
-                scale: 1 1.5;
-            }
-            to {
-                rotate: 360deg;
-            }
-        }
-        .side {
-            height: 100vh;
-            width: 100%;
-            top: 710px;
-
-            display: grid;
-            place-items: center;
-
-            overflow: hidden;
-            position: absolute;
-        }
-        .side .title {
-            font-family: "Muli-Black";
-            font-size: 8vw;
-            margin: 0px 15vw;
-            width: 70vw;
-            font-size: 100px;
-        }
-        #left-side {
-            color: black;
-            background-color: #ff931d;
-            z-index: 10;
-        }
-        #right-side {
-            color: #ff931d;
-            background-color: black;
-            z-index: 9;
-        }
-        #Big-text-orange {
-            font-size: 400px;
-            color: #ef7c00;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
-        #Big-text-grey {
-            font-size: 200px;
-            color: #1e1d1b;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
-        #number-black {
-            color: black;
-            font-size: 30px;
-            font-family: "Muli-Bold";
-        }
-        #number-white {
-            color: white;
-            font-size: 30px;
-            font-family: "Muli-Bold";
-        }
+    <style src="style.css">
     </style>
     <body>
         <div id="blob"></div>
         <div id="blur"></div>
         <div class="topnav">
-            <a href="#members">Members</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a></li>
+            <a class="navbar" href="#members">Members</a>
+            <a class="navbar" href="#contact">Contact</a>
+            <a class="navbar" href="#about">About</a>
             <li style="float:left"><a class="home" href="#home">
                 <div class="logo-container">
                     <img src="image/UNILANG logo.png" class="logo" width="8%">
@@ -291,10 +25,10 @@
             </a></li>
         </div>
             <img class="logo-bg" src="image/UNILANG logo.png" width=auto height=auto></img>
-            <img class="avatar" src="image/foreground1-edgeblur.png" width=auto height=auto></img>
+            <img class="avatar" src="image/foreground4-edgeblur.png" width=auto height=auto></img>
             <div class="drone-container">
                 <img class="drone" src="image/drone.png" width=auto height=auto></img>
-            </div>
+        </div>
             <div class="invite">
                 <div class="text-container3">
                     <strong class="start" data-value="Start">Start</strong>
@@ -305,7 +39,14 @@
                 <div class="text-container">
                     <h1>let <mark class="orange">possible</mark> = <span class="auto-type"></span>;</h1>
                 </div>
-            </div>
+                <div class="text-container0">
+                    <p>A student-led non-profit organization strive to 
+                        <br>
+                        expand opportunity to students across Thailand, 
+                        <br>
+                        providing onsite easy to access STEM education.</p>
+                </div>
+            </div> 
         <div id="left-side" class="side">
             <h2 class="title">
                 <div id="Big-text-orange">170</div> 
@@ -319,76 +60,6 @@
     </body>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js">  
     </script>
-    <script>
-        const blob = document.getElementById("blob");
-
-        document.body.onpointermove = event => {
-            const { clientX, clientY } = event;
-
-            blob.animate({
-                left: `${clientX}px`,
-                top: `${clientY}px`
-            }, { duration: 3000, fill: "forwards"});
-        }
-
-        var typed = new Typed(".auto-type", {
-            strings: ["", "true"],
-            typeSpeed: 150,
-            backSpeed: 150,
-            loop: true
-        })
-
-        const letters = "abcdefghijklmnopqrStuvwxYz"
-        document.querySelector("strong.start").onmouseover = event => {
-            let iteration = 0;
-
-            const interval = setInterval(() => {
-                event.target.innerText = event.target.innerText.split("")
-                .map((letter, index) => {
-                    if(index < iteration){
-                        return event.target.dataset.value[index];
-                    }
-
-                    return letters[Math.floor(Math.random() * 26)]
-                })
-                .join("");
-
-            if(iteration >= event.target.dataset.value.length) clearInterval(interval);
-
-            iteration += 1 / 3;
-            }, 30);
-        }
-
-        document.querySelector("strong.young").onmouseover = event => {
-            let iteration = 0;
-
-            const interval = setInterval(() => {
-                event.target.innerText = event.target.innerText.split("")
-                .map((letter, index) => {
-                    if(index < iteration){
-                        return event.target.dataset.value[index];
-                    }
-
-                    return letters[Math.floor(Math.random() * 26)]
-                })
-                .join("");
-
-            if(iteration >= event.target.dataset.value.length) clearInterval(interval);
-
-            iteration += 1 / 3;
-            }, 30);
-        }
-
-        const left = document.getElementById("left-side")
-
-        const handleOnMove = e => {
-            const p = e.clientX / window.innerWidth * 100;
-
-            left.style.width = `${p}%`
-        }
-
-        document.onmousemove = e => handleOnMove(e);
-    
-        document.ontouchmove = e => handleOnMove(e.touches[0]);
+    <script src="script.js">
     </script>
 </html>
