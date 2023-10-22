@@ -1,11 +1,19 @@
+::selection {
+    background-color: #04f6b2;
+    color: black;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #000000;
     z-index: 0;
+    overflow-x: hidden;
 }
+
 img.drone {
     position: relative;
     left: 950px;
@@ -18,14 +26,17 @@ img.drone {
     animation-direction: alternate;
     z-index: 4;
 }
+
 .drone-container {
     width: 15%;
 }
+
 @keyframes fly {
     0%   {left:940px; top:0px;}
     50%  {left:943px; top:40px;}
     100% {left:940px; top:70px;}
 }
+
 @font-face {
     font-family: "OpenSans-Bold";
     src: url("webfont/OpenSans-Bold.ttf") format("truetype");
@@ -54,16 +65,23 @@ img.drone {
     font-family: "Muli-Reg";
     src: url("webfont/Muli-Regular.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Muli-Semi";
+    src: url("webfont/Muli-SemiBold.ttf") format("truetype");
+}
+
 mark.orange {
     color:#ff931d;
     background: none;
     border: none;
 }
+
 mark.green {
     color:#04f7b3;
     background: none;
     border: none;
 }
+
 span {
     color:#04f7b3;
 }    
@@ -78,7 +96,7 @@ span {
 .navbar:hover {
     --d: 100%;
     background-position: 50% 0%;
-    color: #fff;
+    color: black;
     transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
 }
 
@@ -114,6 +132,11 @@ img.logo {
     position: relative;
     width: 100%;
 }
+
+img.logo:hover {
+    transform: scale(1.00);
+}
+
 .logo-bg {
     position: absolute;
     top: 85px;
@@ -121,6 +144,11 @@ img.logo {
     width: 40%;
     z-index: 3;
 }
+
+.logo-bg:hover {
+    transform: scale(1.00);
+}
+
 .avatar {
     position: absolute;
     top: 30px;
@@ -134,14 +162,14 @@ h1.front-page {
 }
 .text-container0 {
     font-size: 14px;
-    color: #636870;
+    color: #6e6e73;
     position: relative;
     bottom: 10px;
     width: 60%;
     margin-bottom: -5px;
     display: flex;
     align-items: center;
-    font-family: "Muli-Reg";
+    font-family: "Muli-Semi";
     justify-content: center;
     z-index: 6;
 }
@@ -191,7 +219,7 @@ strong.young {
     transition-timing-function: ease-in-out;
 }
 strong.young:hover {
-    transform: scale(1.03);
+    transform: scale(1);
 }
 strong.start {
     font-size: 90px;
@@ -202,7 +230,7 @@ strong.start {
     transition-timing-function: ease-in-out;
 }
 strong.start:hover {
-    transform: scale(1.03);
+    transform: scale(1);
 }
 div.invite {
     position: relative;
@@ -239,16 +267,14 @@ div.invite {
     }
 }
 .side {
-    height: 100vh;
+    height: 60vh;
     width: 100%;
     top: 580px;
-
     display: grid;
-    place-items: center;
-
     overflow: hidden;
     position: absolute;
 }
+
 .side .title {
     font-family: "Muli-Black";
     font-size: 8vw;
@@ -256,39 +282,73 @@ div.invite {
     width: 70vw;
     font-size: 100px;
 }
+
 #left-side {
     color: black;
     background-color: #ff931d;
     z-index: 10;
 }
+
 #right-side {
     color: #ff931d;
-    background-color: black;
+    background-color: #04f6b2;
     z-index: 9;
 }
+
+#left-counter {
+    font-family: "Muli-Semi";
+    font-size: 8vw;
+    margin: 0px 15vw;
+    width: 70vw;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+#right-counter {
+    font-family: "Muli-Semi";
+    font-size: 8vw;
+    margin: 0px 15vw;
+    width: 70vw;
+    font-size: 20px;
+    text-align: right;
+    margin-top: 50px;
+}
+
 #Big-text-orange {
-    font-size: 400px;
-    color: #ef7c00;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    font-size: 250px;
+    color: black;
+    position: absolute;
+    text-align: left;
+    margin-left: -120px;
+    margin-top: -160px; /* Add margin-top to move it down */
 }
-#Big-text-grey {
-    font-size: 300px;
-    color: #1e1d1b;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+
+#Big-text-green {
+    font-size: 250px;
+    color: black;
+    text-align: right; /* Change to right */
+    margin-right: 20px; /* Adjust the margin-right as needed */
+    margin-top: -25px; /* Remove the margin-top */
 }
+
 #number-black {
     color: black;
     font-size: 30px;
     font-family: "Muli-Bold";
 }
+
 #number-white {
     color: white;
     font-size: 30px;
     font-family: "Muli-Bold";
 }
+
+#page-3 {
+    background-color: black;
+    margin-top: 200px;
+    width: 1920px;
+    height: 1080px;
+    z-index: 0;
+}
+
